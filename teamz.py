@@ -156,3 +156,17 @@ def main():
             print("Thank you")
             break
         location = move(userInput, location)
+
+      
+      
+     #special rooms
+   def specialRooms():
+  if location == 608 and SecretWordMain == False:
+    randomSecretWord()
+  if location == 805:
+    if "Key" not in inventory:
+      print("The room to the east is locked. You need a key.")
+      roomArray[905] = False
+    else:
+      print("You use to gold key to unlock the door.")
+      roomArray[905] = "The unlocked door leads to your journey home"
